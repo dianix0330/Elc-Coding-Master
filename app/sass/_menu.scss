@@ -1,0 +1,111 @@
+/**
+ * The menu is technically the header of the site, it contains the styles for the drop down of the Search Bar.
+ *
+ */
+
+$navLineHeight: 70px;
+$searchHeight: 40px;
+
+header.menu {
+  // ...
+  width: 100vw;
+  position: relative;
+  background-color: #040a2b;
+  z-index: 10;
+  color: white;
+  .menu__container {
+    display: flex;
+    text-align: left;
+    padding: 0 50px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .menu__container__holder {
+      display: flex;
+      flex-direction: row;
+
+      h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        line-height: $navLineHeight;
+        text-align: left;
+        display: inline-block;
+      }
+      nav {
+        display: flex;
+        flex-direction: row;
+        margin-left: 60px;
+
+        a.nav__item {
+          display: flex;
+          flex-direction: row;
+          font-family: Helvetica, Arial, Sans-Serif;
+          font-size: 17px;
+          line-height: $navLineHeight;
+          text-transform: uppercase;
+          text-decoration: none;
+          white-space: nowrap;
+          border-bottom: 1px solid transparent;
+          margin-right: 20px;
+          color: white;
+        }
+      }
+    }
+
+    .menu__input-search {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      .search__nav__item {
+        display: flex;
+        flex-direction: row;
+        font-family: Helvetica, Arial, Sans-Serif;
+        font-size: 17px;
+        line-height: $navLineHeight;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+        border-bottom: 1px solid transparent;
+        margin-right: 20px;
+        color: white;
+        i {
+          font-size: 30px;
+          line-height: $navLineHeight;
+        }
+        .search-container {
+          visibility: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+
+          input[type="text"] {
+            width: 350px;
+            font-size: 20px;
+            line-height: $searchHeight;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid white;
+            border-radius: 3px;
+            padding: 0 10px;
+            outline: none;
+          }
+          i.close {
+            z-index: 30;
+            position: absolute;
+            right: 10px;
+            top: 0px;
+            font-size: 25px;
+            color: white;
+            line-height: $searchHeight;
+          }
+        }
+        .item-show {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
